@@ -7,11 +7,11 @@ from entropy_utils import find_information_entropy
 class CodingAlgorithm(object):
     """Describes basic interface for coding algorithms."""
     def get_alphabet(self):
-        """Return current alphabet."""
+        """Returns current alphabet."""
         raise NotImplementedError("Should be implemented in child class.")
 
     def get_alphabet_with_probabilities(self):
-        """Return current alphabet with probabilities of symbols."""
+        """Returns current alphabet with probabilities of symbols."""
         raise NotImplementedError("Should be implemented in child class.")  
 
     def get_coded_alphabet(self):
@@ -19,7 +19,7 @@ class CodingAlgorithm(object):
         raise NotImplementedError("Should be implemented in child class.")
 
     def get_average_length(self):
-        """Return average length of coded alphabet's symbols."""
+        """Returns average length of coded alphabet's symbols."""
         raise NotImplementedError("Should be implemented in child class.")
 
     def _sort_alphabet(self, alphabet):
@@ -37,7 +37,7 @@ class CodingAlgorithm(object):
             avr_length += len(coded_dict[letter]) * \
                     self._alphabet_distribution[letter]
         return avr_length  
-
+ 
 
 class FanoCoding(CodingAlgorithm):
     """
