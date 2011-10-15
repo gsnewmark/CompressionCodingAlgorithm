@@ -75,6 +75,11 @@ class FanoCoding(CodingAlgorithm):
     def _code_alphabet(self, result, tmp_alph):
         """Creates compression code for alphabet acording to algorithm."""
         left, right = self._coding_step(tmp_alph)
+        print 'Left part:'
+        print left
+        print 'Right part:'
+        print right
+        print
         for letter in left:
             result.setdefault(letter[0], '')
             result[letter[0]] += '1'
@@ -196,6 +201,10 @@ class HuffmanCoding(CodingAlgorithm):
             new_letter = smallest_letter + second_smallest_letter
             total_probability = smallest_letter_prob + \
                     second_smallest_letter_prob
+            print smallest_letter + ' + ' + second_smallest_letter + ' = '\
+                    + new_letter
+            print total_probability
+            print
 
             # Cleaning alphabet from used letters
             tmp_alph.pop(0)

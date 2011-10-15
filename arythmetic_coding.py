@@ -71,6 +71,8 @@ class ArithmeticCoding(object):
         letter - letter which interval is to be returned
         """
         letter_intervals = self._divide_interval(alphabet, interval)
+        print letter_intervals
+        print 
         return letter_intervals[letter]
 
     def _divide_interval(self, alphabet, interval):
