@@ -1,2 +1,2 @@
-Realisation of a few compression codes needed for a course at university.
+Implementation of a few compression codes needed for a course at university.
 Now includes Huffman's algorithm and Fano algorithm, arythmetic coding.
